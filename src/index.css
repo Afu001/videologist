@@ -1,0 +1,55 @@
+/* index.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* VideoCard.css */
+.video-card {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SwipeableView.css */
+.swipeable-view {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.video-container.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

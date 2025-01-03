@@ -1,0 +1,185 @@
+/* LoginSignup.css */
+
+/* Background and Layout for the Login/Signup Screen */
+.login-signup-screen {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9; /* Light background for the screen */
+    color: #333; /* Neutral text color for readability */
+  }
+
+  /* General Styling */
+.login-signup-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Hide the auth form when admin is logged in */
+.auth-form.hidden {
+  display: none;
+}
+
+/* Admin Upload Section */
+.admin-upload {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.admin-upload h2 {
+  font-size: 1.8rem;
+  color: #6e3f3f;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-upload input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+.admin-upload input:focus {
+  border-color: #45a049;
+}
+
+.admin-upload button {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #ee00ff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-upload button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.error {
+  color: #ff5b5b;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+  
+  /* Auth Form Container */
+  .auth-form {
+    background-color: #ffffff; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for a modern look */
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  /* Heading Style */
+  .auth-form h1 {
+    font-size: 1.8rem;
+    color: #6e3f3f; /* Subtle color for the heading */
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input Fields Styling */
+  .auth-form input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .auth-form input:focus {
+    border-color: #45a049; /* Green border on focus */
+  }
+  
+  /* Button Styling */
+  .auth-form button {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #ee00ff; /* Bright button color */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .auth-form button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Button enlarges slightly on hover */
+  }
+  
+  /* Error Message Styling */
+  .auth-form .error {
+    color: #ff5b5b; /* Error message color */
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Toggle between Sign Up / Log In */
+  .auth-form .toggle-mode {
+    margin-top: 15px;
+    cursor: pointer;
+    color: #6e3f3f; /* Subtle color for the toggle text */
+    text-decoration: underline;
+  }
+  
+  /* Animations */
+  .auth-form {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
