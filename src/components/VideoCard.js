@@ -4,7 +4,7 @@ import './VideoCard.css';
 const VideoCard = ({ video }) => {
   const videoRef = useRef(null);
 
-  // Autoplay video when the component is active
+  
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play();

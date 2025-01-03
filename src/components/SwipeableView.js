@@ -10,7 +10,7 @@ const SwipeableView = ({ videos }) => {
   const [likedVideos, setLikedVideos] = useState({});
 
   const handleLogout = () => {
-    window.location.reload(); // Simulates logout by reloading the app
+    window.location.reload(); 
   };
 
   const handleSwipe = (deltaY) => {
@@ -45,7 +45,7 @@ const SwipeableView = ({ videos }) => {
       video.hashtags.some((hashtag) => hashtag.toLowerCase().includes(query))
     );
     setFilteredVideos(results);
-    setCurrentIndex(0); // Reset to the first result
+    setCurrentIndex(0); 
   };
 
   const handleLike = (index) => {
@@ -84,7 +84,7 @@ const SwipeableView = ({ videos }) => {
               autoPlay
               muted
             />
-            <div className="video-overlay">
+            <div className="video-controls">
               <button onClick={togglePlay} className="play-pause-btn">
                 {playing ? 'Pause' : 'Play'}
               </button>

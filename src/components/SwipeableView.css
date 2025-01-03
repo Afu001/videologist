@@ -70,14 +70,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
-.video-overlay {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
+.video-controls {
+  padding: 20px;
   width: 100%;
   text-align: center;
-  color: white;
 }
 
 .play-pause-btn {

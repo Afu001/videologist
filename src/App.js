@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
 import SwipeableView from './components/SwipeableView'
-import Feed from './pages/Feed'; // Import the SwipeableView component
-import LoginSignup from './components/LoginSignup'; // Import the LoginSignup component
+import Feed from './pages/Feed'; 
+import LoginSignup from './components/LoginSignup'; 
 import './App.css';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
-  const [videos, setVideos] = useState([]); // Array to store video data
+  const [videos, setVideos] = useState([]); 
 
-  // Function to handle successful login
   const handleLoginSuccess = (username) => {
-    setIsLoggedIn(true);  // Set login status to true
-    setUser(username);    // Store the logged-in user's name
-    // Simulate loading videos (can be replaced with an API call)
+    setIsLoggedIn(true);  
+    setUser(username);    
+   
 
   };
 
-  // Function to handle logout
+  
   const handleLogout = () => {
-    setIsLoggedIn(false);  // Set login status to false
-    setUser(null);          // Clear the user data
-    setVideos([]);          // Clear the video list
+    setIsLoggedIn(false);  
+    setUser(null);          
+    setVideos([]);          
   };
 
   return (
