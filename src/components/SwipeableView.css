@@ -55,11 +55,11 @@
   margin: 100px 0 50px 0;
   position: relative;
   text-align: center;
-  display: none; /* By default, all video cards are hidden */
+  display: none; 
 }
 
 .video-card.active {
-  display: block; /* Show the current active video card */
+  display: block; 
 }
 
 .video-player {
@@ -70,54 +70,41 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
+
 .video-controls {
   padding: 20px;
   width: 100%;
-  text-align: center;
+  display: flex; 
+  justify-content: center; 
+  gap: 20px; 
+  align-items: center; 
 }
 
-.play-pause-btn {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: none;
-  color: black;
+.play-pause-btn,
+.like-btn {
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
   padding: 12px 20px;
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 20px;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.play-pause-btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
 }
 
 .play-pause-btn:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.video-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.hashtags {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.hashtag {
-  background-color: #444;
-  padding: 5px 10px;
-  margin: 5px;
-  border-radius: 20px;
-}
-
 .like-btn {
   background-color: rgba(255, 255, 255, 0.5);
-  border: none;
   color: white;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
 }
 
 .like-btn.liked {
@@ -129,13 +116,34 @@
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+.hashtags {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  justify-content: center;
+}
+
+.hashtag {
+  background-color: #444;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.video-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
 .no-results {
   font-size: 18px;
   color: #bbb;
   margin-top: 20px;
 }
 
-/* Mobile Responsiveness */
+/
 @media (max-width: 768px) {
   .video-player {
     height: 300px;

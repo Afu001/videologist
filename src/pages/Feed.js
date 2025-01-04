@@ -10,7 +10,7 @@ const Feed = () => {
     const fetchVideos = async () => {
       console.log('[Frontend] Fetching video metadata from backend...');
       try {
-        const response = await axios.get('http://localhost:5000/videos/list');
+        const response = await axios.get('https://videologist-backend-main.azurewebsites.net/videos/list');
         console.log('[Frontend] Video metadata received:', response.data);
         setVideos(response.data);
       } catch (error) {

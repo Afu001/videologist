@@ -72,7 +72,7 @@ const LoginSignup = ({ onLoginSuccess }) => {
     formData.append('hashtags', hashtags);
 
     try {
-      const response = await fetch('http://localhost:5000/upload-video', {
+      const response = await fetch('https://videologist-backend-main.azurewebsites.net/upload-video', {
         method: 'POST',
         body: formData,
       });

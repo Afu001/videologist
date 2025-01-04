@@ -10,7 +10,7 @@ const SwipeableView = ({ videos }) => {
   const [likedVideos, setLikedVideos] = useState({});
 
   const handleLogout = () => {
-    window.location.reload(); 
+    window.location.reload();
   };
 
   const handleSwipe = (deltaY) => {
@@ -45,7 +45,7 @@ const SwipeableView = ({ videos }) => {
       video.hashtags.some((hashtag) => hashtag.toLowerCase().includes(query))
     );
     setFilteredVideos(results);
-    setCurrentIndex(0); 
+    setCurrentIndex(0);
   };
 
   const handleLike = (index) => {
@@ -78,7 +78,7 @@ const SwipeableView = ({ videos }) => {
           >
             <video
               id={`video-${index}`}
-              src={`http://localhost:5000${video.url}`}
+              src={`https://videologist-backend-main.azurewebsites.net${video.url}`}
               className="video-player"
               loop
               autoPlay
@@ -88,18 +88,18 @@ const SwipeableView = ({ videos }) => {
               <button onClick={togglePlay} className="play-pause-btn">
                 {playing ? 'Pause' : 'Play'}
               </button>
-              <h2 className="video-title">{video.title}</h2>
-              <div className="hashtags">
-                {video.hashtags.map((hashtag, i) => (
-                  <span key={i} className="hashtag">#{hashtag}</span>
-                ))}
-              </div>
               <button
                 onClick={() => handleLike(index)}
                 className={`like-btn ${likedVideos[index] ? 'liked' : ''}`}
               >
                 ❤️
               </button>
+            </div>
+            <h2 className="video-title">{video.title}</h2>
+            <div className="hashtags">
+              {video.hashtags.map((hashtag, i) => (
+                <span key={i} className="hashtag">#{hashtag}</span>
+              ))}
             </div>
           </div>
         ))
